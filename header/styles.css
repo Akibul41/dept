@@ -1,0 +1,368 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  background-color: rgb(209, 224, 213);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* Container */
+.container {
+  background-color: rgb(238, 248, 215);
+  margin: 1px;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Headline */
+.headline {
+  text-align: center;
+  font-weight: bold;
+  color: hsl(115, 59%, 30%);
+  text-shadow: 2px 2px 4px rgba(248, 132, 132, 0.5);
+  border: 2px solid #000200;
+  box-shadow: -10px 5px 20px rgba(251, 10, 10, 0.1);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  background-color: rgb(0, 4, 253);
+  box-shadow: 5px 3px 1px rgba(50, 0, 50, 0.1); /* Navbar shadow */
+  padding: 10px 0;
+  margin-bottom: 20px; /* Space below navbar */
+  z-index: 10;
+  position: sticky ;
+  width: 100%;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  height: 35px;
+}
+nav a {
+  height: 100%;
+  padding: 0 40px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+svg{
+  fill:yellow;
+}
+
+.notice {
+  box-shadow: 0 0 5px rgb(240, 68, 16), 0 0 5px rgb(221, 54, 54);
+  border-radius: 30px;
+}
+
+nav a:hover {
+  color: aquamarine;
+  background-color: #000000;
+  transition: 1000ms;
+}
+
+
+
+
+
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  height: calc(100vh - 60px); /* Sidebar height adjusted to not overlap the navbar */
+  width: 250px;
+  background: #2f00ff;
+  backdrop-filter: blur(10px); /* Adjust blur for a cleaner look */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none; /* Sidebar is hidden by default */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1000; /* Ensure it appears above other content */
+
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+.menu-button {
+  display: none;
+}
+
+/* Sidebar visible state */
+.sidebar.open {
+  display: flex; /* Show the sidebar when triggered */
+}
+
+/* Responsive for Mobile */
+@media(max-width: 800px) {
+  .hideOnMobile {
+      display: none;
+  }
+  .menu-button {
+      display: block;
+  }
+}
+
+@media(max-width: 530px) {
+  .sidebar {
+      width: 100%;
+  }
+}
+
+
+
+/* Container for the slideshow */
+.container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Center the slideshow horizontally */
+  align-items: center;
+  position: relative;
+  margin: 0px 0;  /* Add some spacing around */
+  margin-left: 10px;
+}
+
+/* Slide container */
+.slide-container {
+  width: 80%;
+  max-width: 800px;  /* Set a maximum width for large screens */
+  aspect-ratio: 16 / 9;  /* Maintain aspect ratio for images */
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+  height: 100%;
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide img.active {
+  opacity: 1;
+}
+
+.description {
+  width: 20%;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* @media (max-width: 768px) {
+  .description {
+      width: 100%;
+      text-align: center;
+  }
+  .slide-container {
+      width: 100%;
+      height: 50vh;
+  }
+} */
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slide-container {
+    width: 90%;  /* Increase width on smaller screens */
+    max-width: 100%;
+  }
+
+
+
+
+
+
+  .description {
+    display: none;
+    /* width: 100%;
+    text-align: center; */
+  }
+  .about-image{
+    border: 3px solid red;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-container {
+    width: 100%;  /* Use the full width of the screen on very small devices */
+  }
+
+
+
+
+}
+
+
+/*body of the page*/
+
+.notices {
+  height: 30px;
+  color: red;
+  background-color: rgb(241, 195, 193);
+  border: 1px solid rgb(35, 178, 235);
+}
+
+.container3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center the slideshow horizontally */
+  align-items: center;
+  position: relative;
+  margin: 5px 0;  /* Add some spacing around */
+
+}
+
+.prin{
+  width: 100%;
+  max-width: 400px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+.about-image{
+  height: 285px;
+  width: 400px;
+  float: right;
+  margin-left: 30px;
+  box-shadow:  0 0 10px rgb(0, 253, 127);
+}
+
+.about-image2{
+  height: 262px;
+  width: 400px;
+  float: right;
+  margin-left: 30px;
+  box-shadow:  0 0 10px rgb(0, 253, 127);
+}
+
+
+
+
+
+
+
+.about_section{
+border: calc(1vw + 5px) solid rgb(223, 226, 224);
+text-align: justify;
+margin-top: 0;
+border-top: 0;
+
+}
+
+.subHead{
+  border: 2px solid #e7b500;
+  margin-bottom: 30px;
+  
+  background: linear-gradient(to bottom, #c9e7f0, #cecef5);
+}
+
+.title{
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  color: #1138b8;
+  text-align: center;
+  border: 2px solid #e7b500;
+  background: linear-gradient(to top, #a0d9eb, #cecef5,  #6ac6e2);
+}
+.texx{
+  color: #2c3e50;
+  padding: .2em;
+  margin: .5em;
+   border: 2px solid #088cad;
+   background-color: rgba(255, 215, 0, 0.2);
+   max-height: 430px;
+   overflow: scroll;
+}
+p{
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.buttons{
+  height: auto;
+  width: 20%;
+  min-width: fit-content;
+  position: sticky;
+
+}
+
+
+.dept {
+  width: 100px;
+  height: 50px;
+  clear: both;
+  white-space: nowrap;
+  font-size: .8em;
+
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(100, 75, 75, 0.35);
+  margin: 2px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+  text-align: center;
+
+  background-color: green;
+  color: white; /* Text color */
+}
